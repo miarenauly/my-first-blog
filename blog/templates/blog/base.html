@@ -4,16 +4,24 @@
 		<title> Travel Bible </title>
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
-		<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 	</head>
 
 	
 	<body>
 		<div class="page-header">
-			<h1><a href="/">Travel Bible</a></h1>
+			<h1><a href="/blog/">Travel Bible</a></h1>
 			<p><b> Your Travel Compass! </b></p>
 		</div>
+		
+		<div class="page-trans">
+			{% if user.is_authenticated %}
+				<p>Contribute by posting your travel tips here</p>
+				<p><a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span> Add new</a></p><br>
+			{% endif %}
+		</div>
+		
 		<div class="content container">
 			<div class="row">
 				<div class="col-md-8">

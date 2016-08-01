@@ -23,6 +23,18 @@ h2 a {
     text-decoration: none;
 }
 
+.page-trans {
+    background-color: #ff9400;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-trans {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
 .content {
     margin-left: 40px;
 }
