@@ -7,10 +7,10 @@
 				<p><i>Published: {{ post.published_date }}</i></p>
 			</div>
 	{% endif %}
+			<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
 			{% if user.is_authenticated %}
 				<p><a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span> Edit</a></p>
 			{% endif %}
-			<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
 			<p>{{ post.text|linebreaksbr }}</p>
 		</div>
 {% endblock %}
